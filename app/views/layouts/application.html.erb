@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <title>TheAssistant</title>
+  <!--<link rel="stylesheet" href="//TheAssistant.com/assets/bootstrap.css">
+  <link rel="stylesheet" href="//TheAssistant.com/assets/bootstrap-theme.css">-->
+  
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <link rel="stylesheet" href="assets/header.css"
+  
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+ <%= render 'layouts/header' %>
+
+<h1>The Assistant</h1>
+</html>
+
+<div class="container">
+  
+  <% if notice %>
+  <p class="alert alert-success"><%= notice %></p>
+<% end %>
+<% if alert %>
+  <p class="alert alert-danger"><%= alert %></p>
+<% end %>
+
+  <%= yield %>
+  <%= render 'layouts/footer' %>
+</div>
+
+<script src="//TheAssistant.com/assets/bootstrap.js"></script>
+
+</body>
